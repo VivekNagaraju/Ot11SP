@@ -14,7 +14,7 @@ Conditional statements: Flow of program execution will be decided based on a con
 3. Series if-else statements
 4. Nested if-else statements
 '''
-age = int(input("Please enter your age:"))
+# age = int(input("Please enter your age:"))
 
 '''
 if age>12:
@@ -24,7 +24,7 @@ else:
 
 print("Program terminated")
 '''
-
+'''
 if age>0:
     if age<=3:
         print("You're a toddler")
@@ -38,3 +38,20 @@ if age>0:
         print("You're senior citizen")
 else:
     print("Please enter positive number")
+'''
+year = int(input("Please enter a Year in YYYY format:"))
+
+if year%100 == 0:
+    if year%400 == 0:
+        print(f"{year} is a leap year")
+    
+    else:
+        print(f"{year} is not a leap year")
+
+else:
+    if year%4 == 0:
+        print(f"{year} is a leap year")
+    
+    else:
+        print(f"{year} is not a leap year")
+

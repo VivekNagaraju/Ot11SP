@@ -36,11 +36,13 @@ II. Classification of operators based on Operations:
     6. Identity Operators: To check identity/ to check whether 2 variables are identical
         -- is , is not
     7. Unary Minus operator: To negate the numbers
+    
+    String formatting/ formulazing
 '''
 print("=======Arithmetic Operators=========")
-a = 20
+a = 27
 b = 3
-print("a+b:", a+b)
+print(f"Sum of {a} and {b}:", a+b)
 print("a-b:", a-b)
 print("a*b:", a*b)
 print("a/b:", a/b)
