@@ -15,7 +15,18 @@ Types of Looping Statements:
     - define the condition
     - increment/ decrement
     
-2. For loop
+2. For loop: Is used to iterate over a sequence/ range
+
+range(1, 10, 3) - 1, 4, 7
+
+
+Loop control statements:
+1. break - stop loop execution in between
+2. continue - skips the execution of statements in a loop available after continue statement once
+
+
+105 - chethan
+
 
 '''
 
@@ -27,10 +38,56 @@ while count < 5: # condition
     # count = count + 1 # increment
     count+=1 # increment
 '''
-
+'''
 count = 5 # initial variable
 
 while count > 0: # condition
     print("Hello world!")
     # count = count - 1 # decrement
     count-=1 # decrement
+    
+'''
+# Infinite Loops
+'''
+while True:
+    print("Hello world!")
+'''    
+'''    
+while 1==1:
+    print("Hello world!")
+    
+'''
+
+# print(range(4))
+'''
+for i in range(1, 100):
+    print(i)
+    if i == 50:
+        break
+    
+'''
+
+'''
+num=1
+while True:
+    
+    print(num)
+    num+=1
+    if num==51:
+        break
+        
+'''
+'''
+for i in range(1, 100):
+    if i == 50:
+        continue
+    print(i)
+'''   
+
+num=1
+while num<100:
+    if num == 50:
+        num+=1
+        continue
+    print(num)
+    num+=1
