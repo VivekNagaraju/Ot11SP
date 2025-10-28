@@ -3,6 +3,8 @@ Data Structures(DS): A structure constructed from several data elements
 
 Sequences: Group of 'related' elements which are stored together in a 'particular order' in a
             single variable
+            
+DS is a derived data type
 
 Types of DS: Built-in/ fundamental 
 1. List --> []
