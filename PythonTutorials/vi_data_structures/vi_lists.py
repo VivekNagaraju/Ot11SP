@@ -68,3 +68,18 @@ print("Length of list4:", len(list4))
 
 for i in list4:
     print(i)
+    
+    
+'''While loop'''
+
+print("=========Accessing using while loop===========")
+'''
+print(list4[0])
+print(list4[1])
+print(list4[2])....
+'''
+i=0
+
+while i<len(list4):
+    print(list4[i])
+    i+=1
