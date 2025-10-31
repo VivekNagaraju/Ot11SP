@@ -14,7 +14,7 @@ List:
     - List is heterogeneous: List stores all fundamental data-types including None type
     
 2. Accessing the elements:
-    - Using Index:  List supports indexing
+    a. Using Index:  List supports indexing
         Index is a number which represents a position in a DS
         - Positive Index: 
             > Numbering the positions from left-to-right ( --> )
@@ -30,8 +30,14 @@ List:
             > Using index greater than or equal to length of the list. Ex: list4[7]
             > Using index lesser than the negative value of length of the list. Ex: list4[-8]
             
-    - Using loops
-    - Using slicing operator
+    b. Using loops
+    c. Using slicing operator - to access multiple/ group of elements from a DS
+    Syntax: list_name[start : stop : step]
+    -> start - start index (included), default = 0*
+    -> stop - stop index (excluded), default = len(list)
+    -> step - increment/ decrement, default = 1
+    
+2. Modification: List is mutable (modifiable)
 '''
 
 list1 = []
@@ -83,3 +89,37 @@ i=0
 while i<len(list4):
     print(list4[i])
     i+=1
+
+print("=======Slicing Operator========")
+print("list4=",list4)
+print("list4[0:4]=", list4[0:4])
+print("list4[::]=", list4[::])
+print("list4[:7:]=", list4[:7:])
+
+
+print("======Functions specific to Lists==========")
+print("list4=",list4)
+list4.append(78)
+print("list4=",list4)
+list4.append(list2)
+print("list4=",list4)
+print("list3=", list3)
+list3.clear()
+print("list3=", list3)
+list5 = list4.copy()
+print("list5=",list5)
+print("id(list4):", id(list4))
+print("id(list5):", id(list5))
+print(list5.append(67))
+print("list4=",list4)
+print("list5=",list5)
+list5[4]=False
+print("list4=",list4)
+print("list5=",list5)
+print("list5.count(1):", list5.count(1))
+print("list5.count(2):", list5.count(2))
+list5.extend(list2)
+print("list5=",list5)
+print("list5.count(2):", list5.count(2))
+print("list5[8]:",list5[8])
+print("list5[10]:",list5[10])
