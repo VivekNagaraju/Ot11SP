@@ -122,4 +122,58 @@ list5.extend(list2)
 print("list5=",list5)
 print("list5.count(2):", list5.count(2))
 print("list5[8]:",list5[8])
+print("list5[9]:",list5[9])
 print("list5[10]:",list5[10])
+print("list5[8][1]:",list5[8][1])
+print("list5.index(2):",list5.index(2))
+print("list5.index(2, 2):",list5.index(2, 2))
+# print("list5.index(2, 11):",list5.index(2, 11)) # ValueError: 2 is not in list
+
+list5.insert(3, 100)
+print("list5=", list5)
+
+list5.remove(False)
+print("list5=", list5)
+
+print("list5.pop(5):",list5.pop(5))
+print("list5=", list5)
+
+print("list5.pop():",list5.pop()) # it removes the element from last index of the list
+print("list5=", list5)
+
+print("list5.remove(78):", list5.remove(78))
+print("list5=", list5)
+
+# print("list5.remove():", list5.remove()) # TypeError: list.remove() takes exactly one argument (0 given)
+# print("list5=", list5)
+
+list5.reverse()
+print("list5=", list5)
+
+list6 = [2, 3, 4, 5, 78, 65, 54, 63, 5, 8, 9]
+print("list6:", list6)
+list6.sort()
+print("list6:", list6)
+
+list6.sort(reverse=True)
+print("list6:", list6)
+list7=[]
+for i in list6:
+    if i%2 == 0:
+        list7.append(i)
+        
+print("list7:",list7)
+
+# List Comprehension:
+
+list8 =[j for j in list6 if j%2==0]
+print("list8:",list8)
+
+
+'''
+1. Present a list to the user which contains duplicate and unique elements
+2. Take any element from the list as input from the user
+3. Print how many number of times that element appears in the list
+4. Print the indices of that element in the list
+
+'''
