@@ -106,7 +106,7 @@ print("list4=",list4)
 print("list3=", list3)
 list3.clear()
 print("list3=", list3)
-list5 = list4.copy()
+list5 = list4.copy() # Copying/ cloning
 print("list5=",list5)
 print("id(list4):", id(list4))
 print("id(list5):", id(list5))
@@ -177,3 +177,14 @@ print("list8:",list8)
 4. Print the indices of that element in the list
 
 '''
+
+list9 = list8 # Aliasing
+print("list9:",list9)
+print("id(list8):", id(list8))
+print("id(list9):", id(list9))
+list9[3]=100
+print("list8:",list8)
+print("list9:",list9)
+
+print("list8 + list5:",list8 + list5) # extending list8 with list5
+print("list8*2:", list8*2) # extending the same list twice

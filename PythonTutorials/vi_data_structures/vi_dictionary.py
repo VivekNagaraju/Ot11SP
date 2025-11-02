@@ -65,8 +65,30 @@ print("=======Modification of Dictionary======")
 dict70={1:"jai",2:"yogesh",3:"Anu",4:"Anu"}
 dict70[5]="Nitin"
 dict70[6]="Great"
+dict70[2]="Yogi"
 
 print("Dictionary after modification is below:")
 print(dict70)
 
+print("Length of dict70:", len(dict70))
 
+dict71 = dict70.fromkeys(['One', 'Two', 'Three'], 0)
+
+print("dict70",dict70)
+print("dict71",dict71)
+
+print(dict70.items())
+
+print(dict70.keys())
+print(dict70.values())
+
+for i in dict70.values():
+    print(i)
+
+print("=====================")
+print(dict70.setdefault(3, "abc"))
+print(dict70.setdefault(7, "abc"))
+print("dict70:",dict70)
+
+dict70.update(one="Tejas",two="Sai Rohan")
+print("dict70:",dict70)
