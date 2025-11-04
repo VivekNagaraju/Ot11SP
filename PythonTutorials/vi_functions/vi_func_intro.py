@@ -54,15 +54,28 @@ def welcome(): # Function without parameters
     print("Welcome to iQuest!!")
     
 def add(a, b): # Function with parameters
-    print("=======Addition Started========")
+    # print("=======Addition Started========")
     c=a+b
-    print(f"Sum of {a} and {b} is", c)
-    print("=======Addition Completed========")
+    # print(f"Sum of {a} and {b} is", c)
+    # print("=======Addition Completed========")
     return c # returns value when function is called. return statement is optional
 
+def sub(a, b):
+    c=a-b
+    return c
+
+def add_sub(a, b):
+    c = add(a, b) # calling a function inside another function
+    d = sub(a, b)
+    return c, d # returning multiple values
 
 welcome()
 add(3, 4)
 add(2, 6)
 result = add(7, 9)
 print("result-->", result)
+x, y = add_sub(38, 25) # Unpacking of tuple
+print("Result of add_sub():", x, y)
+
+addition = add # Creating alias/ assigning a function to a variable
+print(addition(4, 7)) # passing a function as parameter to another function
