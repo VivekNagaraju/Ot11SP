@@ -16,10 +16,19 @@ name = "vivek"
 address = """iQuest, #31/B,
             Hebbal Industrial Area,
             Mysuru"""
+
+salary = 100
             
 message = 'Welcome to "iQuest"'
 
 action = "eating"
+
+print(f"{name}'s salary is {salary} and works in {address}")
+
+print("{}'s salary is {} and works in {}".format(name, salary, address))
+
+print("{a}'s salary is {b} and works in {c}".format(b=salary, a=name,  c=address))
+
 print(empty_string)
 print(type(empty_string))
 
