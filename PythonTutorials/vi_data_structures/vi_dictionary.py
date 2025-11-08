@@ -15,7 +15,7 @@ Syntax of dictionary
    both the elements are retained/accepted as it is
 6. Dictionary can be mutable(modifiable) 
 
-
+pip install -U selenium
 '''
 
 tejas={}

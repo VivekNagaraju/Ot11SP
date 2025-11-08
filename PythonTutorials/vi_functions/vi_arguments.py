@@ -52,5 +52,7 @@ var_len(5, 7, 9)
 
 def kw_var_len(**a):
     print(a)
+    b = a 
+    print(b)
 
 kw_var_len(a=5, b=6, c=8, d=9)
