@@ -8,3 +8,4 @@ Object: Real-world entity
 - Using class as blueprint/ mould we create objects. So an object is called as an instance of a class
 
 '''
+print("Welcome to OOPS!!")

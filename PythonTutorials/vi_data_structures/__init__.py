@@ -12,3 +12,4 @@ Types of DS: Built-in/ fundamental
 3. Set --> {}
 4. Dictionary --> {:}
 '''
+print("Welcome to Data Structures!!")

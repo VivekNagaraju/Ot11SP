@@ -30,6 +30,7 @@ Advantage:
 
 
 '''
+
 '''
 a=6
 b=8
@@ -79,3 +80,4 @@ print("Result of add_sub():", x, y)
 
 addition = add # Creating alias/ assigning a function to a variable
 print(addition(4, 7)) # passing a function as parameter to another function
+
