@@ -4,6 +4,7 @@ Created on 08-Nov-2025
 @author: Vivek
 '''
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 # 1. Launching the chrome browser 
 
@@ -36,3 +37,12 @@ if expected_url == current_page_url:
     print("Test passed!")
 else:
     print("Test failed!")
+    
+    
+# 6. Enter name
+
+# 6a. Locating the element
+name_txt_bx = driver.find_element(By.ID, "name") 
+
+# 6b. enter name
+name_txt_bx.send_keys("Vivek")
