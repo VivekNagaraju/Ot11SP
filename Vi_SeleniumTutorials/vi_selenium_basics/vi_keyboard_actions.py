@@ -1,12 +1,12 @@
 '''
-Created on 05-Dec-2025
+Created on 06-Dec-2025
 
 @author: Vivek
 '''
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
+from selenium.webdriver.common.keys import Keys
 
 # 1. Launching the chrome browser 
 
@@ -23,15 +23,9 @@ driver.get("https://testautomationpractice.blogspot.com/")
 # 3. Create ActionChains object
 actions = ActionChains(driver)
 
-# 4. Scrolling
-# actions.scroll_by_amount(0, 1680).perform() 
+# 4. Select the content in field1 --> Ctrl+a
+field1 = driver.find_element(By.ID, "field1")
+actions.key_down(Keys.CONTROL, field1).send_keys("a").key_up(Keys.CONTROL).perform()
 
-# 5. Drag and drop
-source = driver.find_element(By.ID, "draggable")
-target = driver.find_element(By.ID, "droppable")
-# print(target.rect)
-
-actions.scroll_from_origin(ScrollOrigin.from_element(target), 0, 200).perform()
-actions.drag_and_drop(source, target).perform()
-# actions.drag_and_drop_by_offset(source, xoffset, yoffset)
-
+# 5. Copy content from field1 --> Ctrl+c
+# 6. Paste the content into field2 --> Ctrl+v
