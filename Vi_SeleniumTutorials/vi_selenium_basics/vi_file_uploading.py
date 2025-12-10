@@ -31,3 +31,14 @@ upload_single_file_btn.click()
 # 5. Get/fetch the upload status message
 single_file_status = driver.find_element(By.ID, "singleFileStatus")
 print(single_file_status.text)
+
+'''
+Columns: Name, memory, disk, network, cpu
+Rows: System, chrome, firefox, ie
+
+//tbody[@id="rows"]/tr[4]/td[4]
+
+//tbody[@id="rows"]/tr[4]/td[contains(text(), "Mbps")]
+
+//tbody[@id="rows"]/tr[4]/td[contains(text(), "MB") and not(contains(text(),"/s"))]
+'''
