@@ -27,3 +27,7 @@ date_picker_2 = driver.find_element(By.ID, "txtDate")
 # Remove readonly attribute using JavaScript
 driver.execute_script("arguments[0].removeAttribute('readonly');", date_picker_2)
 date_picker_2.send_keys("01/01/2000")
+
+# 5. Take screenshot
+# driver.save_screenshot(r"/Screenshots/date.png")
+driver.get_screenshot_as_file(r"C:\Users\admin\git\Ot11SP\Vi_SeleniumTutorials\Screenshots\date.png")
