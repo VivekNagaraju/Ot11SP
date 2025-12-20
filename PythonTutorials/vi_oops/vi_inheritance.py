@@ -16,9 +16,13 @@ Types of Inheritance:
 
 Method Resolution Order: mro()
 '''
+
 class GrandFather:
-    def __init__(self):
-        print("This is GF's constructor")
+    
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+        print(f"Object is created with name:{self.name} and gender:{self.gender}")
         
     def gf_method(self):
         print("This is GrandFather class method")
@@ -27,11 +31,23 @@ class GrandFather:
         print("This is GF's home")
         
 class Father(GrandFather):
+    
+    def __init__(self, name, gender, dob):
+        self.dob = dob
+        '''
+        self.name = name
+        self.gender = gender
+        print(f"Object is created with name:{self.name} and gender:{self.gender} on {dob}")
+        '''
+        super().__init__(name, gender)
+        print(f"D.O.B.:{self.dob}")
+    
     def f_method(self):
         print("This is Father class method")
     
     def home(self):
         print("This is Father's home")
+        super().home()
         
 class Mother:
     def m_method(self):
@@ -46,15 +62,19 @@ class Child(Father, Mother):
     
     def home(self):
         print("This is Child's home")
-        
-ajja = GrandFather()
+
+print("========GrandFather Class=========")        
+ajja = GrandFather("Gaddappa", "Male")
 ajja.gf_method()
 
-appa = Father()
+print("========Father Class=========") 
+appa = Father("Ayyappa", "Male", "01/01/1947")
 appa.f_method()
 appa.gf_method()
+appa.home()
 
-nanu = Child()
+print("========Child Class=========")
+nanu = Child("Maramma", "Female", "01/04/2004")
 nanu.c_method()
 nanu.f_method()
 nanu.gf_method()
