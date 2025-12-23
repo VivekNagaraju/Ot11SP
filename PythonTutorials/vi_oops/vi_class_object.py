@@ -11,29 +11,31 @@ Constructor: Special/magic method used to construct an object with specific feat
 '''
 
 class DogClass:
-    '''
+    
     def __init__(self, name, color, gender, breed): # Constructor
         print(f"A dog- {name} is created with color:{color}, gender:{gender} and breed:{breed}")
         self.name = name
         self.color = color
         self.gender = gender
         self.breed = breed
-    '''   
+     
     def bark(self): # Method
         # print(f"{self.name} is barking")
         print(f"Dog is barking")
         
-puppy = DogClass()
-# puppy = DogClass("Puppy","Brown", "Female", "German Sheperd")
+# puppy = DogClass()
+puppy = DogClass("Puppy","Brown", "Female", "German Sheperd")
 # puppy.__init__("Puppies","Red", "Female", "German Sheperd")
 puppy.bark()
 print(type(puppy))
 
-ramana = DogClass()
-# ramana = DogClass("Ramana","Brown", "Male", "German Sheperd")
+# ramana = DogClass()
+ramana = DogClass("Ramana","Brown", "Male", "German Sheperd")
 ramana.bark()
 puppy.bark()
-# print(puppy.name)
-# print(ramana.name)
+print("puppy.name:",puppy.name)
+print("ramana.name:",ramana.name)
+puppy.name = "Puppi"
+print("puppy.name:",puppy.name)
 
 print(dir(puppy))
