@@ -6,6 +6,7 @@ Created on 23-Nov-2025
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from selenium.common.exceptions import NoSuchElementException
 
 # 1. Launching the chrome browser 
 
@@ -40,3 +41,5 @@ time.sleep(3)
 prompt_alert = driver.switch_to.alert
 prompt_alert.send_keys("Vivek")
 prompt_alert.accept()
+
+NoSuchElementException
