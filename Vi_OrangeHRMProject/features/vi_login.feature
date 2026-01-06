@@ -17,14 +17,30 @@
 ## (Comments)
 #Sample Feature Definition Template
 
+@LoginFeature
 Feature: Login Feature
 
-  
-  Scenario: Navigation to OrangeHRM Login Page
-  	Given Chrome browser is launched
+	Background: Precondition steps for Login Feature scenarios
+		Given Chrome browser is launched
   	When User navigates to OrangeHRM Login page
+
+  @NavigationToLoginPage 
+  Scenario: Navigation to OrangeHRM Login Page
   	Then User should see auth/login in current page URL
+  
+  @Login	
+  Scenario: Login to OrangeHRM site
+  	And User enters username
+  	And User enters password
+  	And User clicks on login button
+  	Then User should see dashboard/index in current page URL
    
+  @LoginwithParameters
+  Scenario: Login to OrangeHRM site with Parameters
+  	And User enters username "Admin"
+  	And User enters password "admin1234"
+  	And User clicks on login button
+  	Then User should see "auth/login" in current page URL
 
   #@tag2
   #Scenario Outline: Title of your scenario outline
