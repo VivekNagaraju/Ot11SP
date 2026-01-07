@@ -16,32 +16,47 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
 @LoginFeature
 Feature: Login Feature
 
-	Background: Precondition steps for Login Feature scenarios
-		Given Chrome browser is launched
-  	When User navigates to OrangeHRM Login page
+  Background: Precondition steps for Login Feature scenarios
+    Given Chrome browser is launched
+    When User navigates to OrangeHRM Login page
 
-  @NavigationToLoginPage 
+  @NavigationToLoginPage
   Scenario: Navigation to OrangeHRM Login Page
-  	Then User should see auth/login in current page URL
-  
-  @Login	
+    Then User should see auth/login in current page URL
+
+  @Login
   Scenario: Login to OrangeHRM site
-  	And User enters username
-  	And User enters password
-  	And User clicks on login button
-  	Then User should see dashboard/index in current page URL
-   
+    And User enters username
+    And User enters password
+    And User clicks on login button
+    Then User should see dashboard/index in current page URL
+
   @LoginwithParameters
   Scenario: Login to OrangeHRM site with Parameters
-  	And User enters username "Admin"
-  	And User enters password "admin1234"
-  	And User clicks on login button
-  	Then User should see "auth/login" in current page URL
+    And User enters username "Admin"
+    And User enters password "admin1234"
+    And User clicks on login button
+    Then User should see "auth/login" in current page URL
 
+	@LoginDDT
+  Scenario Outline: Login to OrangeHRM using DDT
+    And User enters username "<Username>"
+    And User enters password "<Password>"
+    And User clicks on login button
+    Then User should see "<ExpectedURL>" in current page URL
+
+    Examples: 
+      | Username | Password  | ExpectedURL     |
+      | Admin    | admin123  | dashboard/index |
+      | Admins   | admin123  | auth/login      |
+      | Admin    | admin1234 | auth/login      |
+      | Admins   | admin1234 | auth/login      |
+      
+      
+      
   #@tag2
   #Scenario Outline: Title of your scenario outline
     #Given I want to write a step with <name>
