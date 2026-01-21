@@ -16,7 +16,7 @@ class BasePage:
         self.driver.get(url)
         
     def enter_text(self, locator, text):
-        element = self.wait.until(EC.visibility_of(locator))
+        element = self.wait.until(EC.visibility_of_element_located(locator))
         element.send_keys(text)
         
     def click_on(self, locator):

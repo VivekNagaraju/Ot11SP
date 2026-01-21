@@ -6,6 +6,7 @@ Created on 05-Jan-2026
 from behave import given, when, then
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from pages.login_page import LoginPage
 
 @given(u'Chrome browser is launched')
 def launch_chrome_browser(context):
@@ -14,33 +15,38 @@ def launch_chrome_browser(context):
     options.add_argument("start-maximized")
     context.driver = webdriver.Chrome(options)
     context.driver.implicitly_wait(5)
+    context.login_page_obj = LoginPage(context.driver)
 
 @when(u'User navigates to OrangeHRM Login page')
 def navigate_to_orangehrm(context):
-    context.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    # context.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    context.login_page_obj.navigate_to_url("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
 @then(u'User should see auth/login in current page URL')
 def validate_login_page(context):
     expected_url = "auth/login"
-    current_page_url = context.driver.current_url
+    current_page_url = context.login_page_obj.get_page_url()
     assert expected_url in current_page_url, "'auth/login' is not present in current page URL"
 
 
 @when(u'User enters username')
 def enter_username(context):
-    username_txtbx = context.driver.find_element(By.NAME, "username")
-    username_txtbx.send_keys("Admin")
+    # username_txtbx = context.driver.find_element(By.NAME, "username")
+    # username_txtbx.send_keys("Admin")
+    context.login_page_obj.enter_username("Admin")
 
 
 @when(u'User enters password')
 def enter_password(context):
-    password_txtbx = context.driver.find_element(By.NAME, "password")
-    password_txtbx.send_keys("admin123")
+    # password_txtbx = context.driver.find_element(By.NAME, "password")
+    # password_txtbx.send_keys("admin123")
+    context.login_page_obj.enter_password("admin123")
 
 @when(u'User clicks on login button')
 def click_on_login_button(context):
-    login_button = context.driver.find_element(By.XPATH,"//button[@type='submit']")
-    login_button.click()
+    # login_button = context.driver.find_element(By.XPATH,"//button[@type='submit']")
+    # login_button.click()
+    context.login_page_obj.click_on_login_btn()
 
 @then(u'User should see dashboard/index in current page URL')
 def validate_dashboard_url(context):
